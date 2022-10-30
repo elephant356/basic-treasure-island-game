@@ -25,19 +25,21 @@ print("Your mission is to find the treasure.")
 
 #https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
 
-turn = input("Left or Right? ")
-if turn == "Right":
-  print("Game Over")
-elif turn == "Left":
+turn = input("Left or Right? ").lower()
+if turn == "left":
   print("Congratulations, your next choice is: ")
-  swimwait = input(" Swim or Wait? ")
-if swimwait == "Swim":
-  print("Game Over")
-elif swimwait == "Wait":
-  print("Congratulations, your next choice is: ")
-  whichdoor = input("Which door will you choose? Red, Blue, or Yellow? ")
-if whichdoor == "Red" or whichdoor == "Blue":
-  print("Game Over")
-elif whichdoor == "Yellow":
+  swimwait = input("Swim or Wait? ").lower()
+else:
+  print("Game Over.")
+
+if swimwait == "wait":
+  print("Congratulations, your next choice is:" )
+  whichdoor = input("Which door will you choose? Red, Blue, or Yellow? ").lower()
+else:
+  print("Game Over.")
+
+if whichdoor == "yellow": 
   print("Congratulations, you won the game! ")
+else:
+  print("Game Over.")
   
